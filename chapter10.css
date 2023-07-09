@@ -7,6 +7,7 @@
 header {
   height: 50px;
   background-color: #ff9a4b;
+  width: 100%;
 }
 
 main {
@@ -21,10 +22,6 @@ main {
   padding: 10px;
   position: relative;
   background-color: #eee;
-}
-
-.step:last-child {
-  margin-right: 0;
 }
 
 .step-img1 {
@@ -63,20 +60,21 @@ main {
 footer {
   height: 50px;
   background-color: #aaa;
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
-  header {
+  main {
+    display: block;
     width: 100%;
   }
 
-  main {
-    display: block;
-    /*flex-direction: column;*/
-    /*width: 100%;*/
+  .step {
+    width: 90%;
+    margin: 0 auto;
   }
 
-    .step {
-    display: block;
+  .step:nth-child(1),.step:nth-child(2) {
+    margin-bottom: 20px;
   }
 }
